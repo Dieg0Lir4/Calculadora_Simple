@@ -15,7 +15,7 @@ INICIO
 
 6)Preguntarle al usuario que pusiera un número y guardarlo en num2
 
-7)Preguntarle al usuario que seleccione un operador de los siguientes “ + , - , * , / ” y guardarlo en la variable operador
+7)Preguntarle al usuario que seleccione un operador de los siguientes “ + , - , * , /, ! ” y guardarlo en la variable operador
 
 8)lee la variable operador y seleccionar un caso 
 
