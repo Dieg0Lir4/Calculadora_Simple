@@ -18,12 +18,19 @@ INICIO
 7)Preguntarle al usuario que seleccione un operador de los siguientes “ + , - , * , / ” y guardarlo en la variable operador
 
 8)lee la variable operador y seleccionar un caso 
+
 	Si operador es + entonces resultado = num1 + num2
+	
 	Si operador es - entonces resultado = num1 - num2
+	
 	Si operador es * entonces resultado = num1 * num2
+	
 	Si operador es / entonces resultado = num1 / num2
+	
 	SI operador es ! entonces entonces
+	
 		Hacer un ciclo que multiplique num1 por num1 menos 1 hasta que num1 llegue a 0
+		
 		
  9)Imprimir “Tu resultado es: ” + resultado
 
