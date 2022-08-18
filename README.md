@@ -1,4 +1,4 @@
-# Calculadora_Simple
+# Calculadora_en_Binaraio
 Creo que es un proyecto muy interesante para empezar, porque con este proyecto se puede aprender mucho sobre la programación. Cómo usar la variables, como recibir input de usuarios y guardarlas, también para usar los comparadores y operadores, y al final regresar un valor. Además a medida que aprendo más de programación la puedes agregar más funciones.
 
 
@@ -24,5 +24,7 @@ Creo que es un proyecto muy interesante para empezar, porque con este proyecto s
 		entonces resultado = num1 / num2
 
 8)Imprimir “Tu resultado es” + resultado
+9) Transforma reslutado en binario y guardala en resultado
+10) Imprimir "Y tu resultado en binario es: " + resultado
 
 **FIN**
