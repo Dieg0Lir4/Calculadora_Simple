@@ -1,8 +1,7 @@
-# Calculadora_en_Binaraio
+**UNA CALCULADORA SIMPLE**
 Creo que es un proyecto muy interesante para empezar, porque con este proyecto se puede aprender mucho sobre la programación. Cómo usar la variables, como recibir input de usuarios y guardarlas, también para usar los comparadores y operadores, y al final regresar un valor. Además a medida que aprendo más de programación la puedes agregar más funciones.
 
-
-**INICIO**
+INICIO
 1) Crear un variable flotante llamada “num 1”
 2) Crear una variable flotante llamada “num2”
 3) Crear una variable string llamada “operador”
@@ -23,8 +22,8 @@ Creo que es un proyecto muy interesante para empezar, porque con este proyecto s
 	Si operador es /
 		entonces resultado = num1 / num2
 
-8)Imprimir “Tu resultado es” + resultado
-9) Transforma reslutado en binario y guardala en resultado
+8)Imprimir “Tu resultado es: ” + resultado
+9) Transforma resultado en binario y guárdala en resultado
 10) Imprimir "Y tu resultado en binario es: " + resultado
 
-**FIN**
+FIN
