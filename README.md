@@ -24,4 +24,5 @@ Creo que es un proyecto muy interesante para empezar, porque con este proyecto s
 		entonces resultado = num1 / num2
 
 8)Imprimir “Tu resultado es” + resultado
+
 **FIN**
