@@ -1,5 +1,5 @@
-# UNA CALCULADORA BINARIA
-Creo que es un proyecto muy interesante para empezar, porque con este proyecto se puede aprender mucho sobre la programación. Cómo usar la variables, como recibir input de usuarios y guardarlas, también para usar los comparadores y operadores, y al final regresar un valor. Además a medida que aprendo más de programación la puedes agregar más funciones.
+# Simulador de ser granjero (para la practica del manejo de recursos)
+Creo que es un proyecto muy interesante para empezar, porque personalmente soy una persona que maneja muy mal sus recursos de tiempo y economicos. Se que no soy el unico, entonces pense en hacer un pequeño simulador de un granjero para que puedas practicar, buscar y experimentar formas de manejar tus recursos de forma eficiente. Tambien se puede llegar a usar en practicas de admisitracion y negocoios.
 
 INICIO
 
