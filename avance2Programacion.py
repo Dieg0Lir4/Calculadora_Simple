@@ -34,18 +34,21 @@ def IrAComprar():
     global comidaDePorkoj
     global numeroDePorkoj
     print("Tu dinero es: $"+ str(dinero))
-    print("Que quieres comprar:  200kg de comida de cerdo ($200) [c]   un porko ($S00) [p]")
+    print("Que quieres comprar:  200kg de comida de porko ($200) [c]   un porko ($500) [p]")
     respuesta = input("Tu respuesta es: ")
     if respuesta == "c":
         dinero = dinero - 200
         comidaDePorkoj = comidaDePorkoj + 200
+        print("Tienes de comida para los porkoj: " + str(comidaDePorkoj) + "kg")
 
     if respuesta == "p":
         dinero = dinero - 500
         numeroDePorkoj = numeroDePorkoj + 1
+        print("Tus porkoj son: " + str(numeroDePorkoj))
 
     print("Tu dinero es: $"+ str(dinero))
-    print("Tus porkoj son: " + str(numeroDePorkoj))
+    
+    
     InicioDelSimulador()
     
 
@@ -62,19 +65,28 @@ def IrAAlimentar():
 
 def IrAVender():
     global dinero
+    global numeroDePorkoj
     print("Cuantos Porkoj vas a vender?")
-    num1 = int(input("Tu respuesta es: ")) * 1000
-    dineroBruto = int(num1)
+    num1 = int(input("Tu respuesta es: "))
+    numeroDePorkoj = numeroDePorkoj - num1
+    dineroBruto = int(num1 * 1000)
     print("Te dieron $" + str(dineroBruto))
     print("Pero como eres una buena pareja le das la mitad a tu pareja")
     dinero = (dinero + num1/2)
     dinero = int(dinero)
     print("Tu dinero es: " + str(dinero)+"$")
+    print("Te quedan: " + str(numeroDePorkoj) + " porkoj")
     InicioDelSimulador()
 
 
 InicioDelSimulador()
 
+
+
+
+    
+    
+    
 
 
 
