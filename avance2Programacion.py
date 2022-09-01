@@ -1,10 +1,18 @@
+from re import I
+from time import sleep
+from typing import Text
+
+
+
 dinero = 500
 comidaDePorkoj = 1000
 numeroDePorkoj= 4
 respuesta = ""
 
 def InicioDelSimulador():
-    print("¿Querires hacer?: Alimentar a los porkoj[a]      Vender a los porkoj[v]      Comprar[c]    Ver tus recursos[r]      Salir[e]")
+
+    Texto("Que quieres hacer")
+
     respuesta = input("Tu respuesta: ")
     if respuesta == "c":
         (IrAComprar())
@@ -18,16 +26,39 @@ def InicioDelSimulador():
     if respuesta == "r":
         VerMisRecursos()
         
+def Texto(textito):
+    if(textito == "Que quieres hacer"):
+        print()
+        print("¿Querires hacer?")
+        sleep(0.5)
+        print("__________________________________")
+        print("|  Alimentar a los porkoj    [a] |")
+        print("|  Vender a los porkoj       [v] |")
+        print("|  Comprar                   [c] |")
+        print("|  Ver tus recursos          [r] |")
+        print("|  Salir                     [e] |")
+        print("----------------------------------")
+
+    elif(textito == "Ver recursos"):
+        print()
+        print("Tus recusos:")
+        sleep(0.5)
+        print("_____________________________")
+        print("| DINERO: " + str(dinero))
+        print("| NUMERO DE PORKOJ: " + str(numeroDePorkoj))
+        print("| COMIDA PARA LOS PORKOJ: " + str(comidaDePorkoj)+"kg")
+        print("------------------------------")
+        print()
+        sleep(1)
+        input("Dale al Enter para continuar")
+        InicioDelSimulador()
+
 def VerMisRecursos():
     global dinero
     global numeroDePorkoj
     global comidaDePorkoj
 
-    print("Tus recusos:")
-    print("DINERO: " + str(dinero))
-    print("NUMERO DE PORKOJ: " + str(numeroDePorkoj))
-    print("COMIDA PARA LOS PORKOJ: " + str(comidaDePorkoj)+"kg")
-    InicioDelSimulador()
+    Texto("Ver recursos")
 
 def IrAComprar():
     global dinero
@@ -50,8 +81,6 @@ def IrAComprar():
     
     
     InicioDelSimulador()
-    
-
 
 def IrAAlimentar():
     global comidaDePorkoj
@@ -78,18 +107,4 @@ def IrAVender():
     print("Te quedan: " + str(numeroDePorkoj) + " porkoj")
     InicioDelSimulador()
 
-
 InicioDelSimulador()
-
-
-
-
-    
-    
-    
-
-
-
-    
-    
-    
