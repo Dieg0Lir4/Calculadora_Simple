@@ -1,5 +1,6 @@
 from re import I
 from time import sleep
+from traceback import print_tb
 from typing import Text
 
 
@@ -11,7 +12,7 @@ respuesta = ""
 
 def InicioDelSimulador():
 
-    Texto("Que quieres hacer")
+    Texto("¿Que quieres hacer?")
 
     respuesta = input("Tu respuesta: ")
     if respuesta == "c":
@@ -27,7 +28,7 @@ def InicioDelSimulador():
         VerMisRecursos()
         
 def Texto(textito):
-    if(textito == "Que quieres hacer"):
+    if(textito == "¿Que quieres hacer?"):
         print()
         print("¿Querires hacer?")
         sleep(0.5)
@@ -53,6 +54,13 @@ def Texto(textito):
         input("Dale al Enter para continuar")
         InicioDelSimulador()
 
+    elif(textito == "¿Que quieres comprar?"):
+        print("_________________________________________")
+        print("|  200kg de comida de porko ($200) [c]  |") 
+        print("|  1 nuevo porko ($500)            [p]  |")
+        print("-----------------------------------------")
+
+
 def VerMisRecursos():
     global dinero
     global numeroDePorkoj
@@ -64,20 +72,38 @@ def IrAComprar():
     global dinero
     global comidaDePorkoj
     global numeroDePorkoj
-    print("Tu dinero es: $"+ str(dinero))
-    print("Que quieres comprar:  200kg de comida de porko ($200) [c]   un porko ($500) [p]")
-    respuesta = input("Tu respuesta es: ")
-    if respuesta == "c":
-        dinero = dinero - 200
-        comidaDePorkoj = comidaDePorkoj + 200
-        print("Tienes de comida para los porkoj: " + str(comidaDePorkoj) + "kg")
 
-    if respuesta == "p":
-        dinero = dinero - 500
-        numeroDePorkoj = numeroDePorkoj + 1
-        print("Tus porkoj son: " + str(numeroDePorkoj))
+    quererComprar = True
+    while quererComprar:
+        sleep(0.5)
+        print("_____________________________")
+        print("| Tienes de dinero: $" + str(dinero))
+        print("| Tienes: " + str(numeroDePorkoj) + " porkoj")
+        print("| Tienes de comida para los porkoj: " + str(comidaDePorkoj)+"kg")
+        print("------------------------------")
+        sleep(0.5)
+        print("¿Que quieres comprar?")
+        Texto("¿Que quieres comprar?")
+        
+        respuesta = input("Tu respuesta es: ")
+        if respuesta == "c":
+            dinero = dinero - 200
+            comidaDePorkoj = comidaDePorkoj + 200
+            print("Tienes de comida para los porkoj: " + str(comidaDePorkoj) + "kg")
 
-    print("Tu dinero es: $"+ str(dinero))
+        if respuesta == "p":
+            dinero = dinero - 500
+            numeroDePorkoj = numeroDePorkoj + 1
+            print("Tus porkoj son: " + str(numeroDePorkoj))
+
+        print("Tu dinero es: $"+ str(dinero))
+        sleep(0.5)
+        respuesta = input("¿Quieres voler a comprar? (s/n)")
+        if respuesta != "s":
+            quererComprar = False
+            
+
+        
     
     
     InicioDelSimulador()
