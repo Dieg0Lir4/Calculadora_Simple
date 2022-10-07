@@ -19,6 +19,7 @@ nombreDeTusPorkoj = []
 pesoDeTusPorkoj = []
 añosDeTusPorkoj = []
 indiceDeTusPorkoj = []
+RegistroDeTodo = [pesoDeTusPorkoj,añosDeTusPorkoj,indiceDeTusPorkoj]
 diaDeInicio = date.today()
 
 
