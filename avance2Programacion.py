@@ -1,15 +1,26 @@
-from datetime import date, datetime
-from distutils.command.clean import clean
+
+#Referencias API
+#Funcion os.system() = https://www.geeksforgeeks.org/python-os-system-method/
+#Funcion input() = https://www.w3schools.com/python/ref_func_input.asp
+#Funcion sleep() = https://www.programiz.com/python-programming/time/sleep
+#Funcion range() = https://www.w3schools.com/python/ref_func_range.asp
+#Funcion len() = https://realpython.com/len-python-function/
+#Funcion str() = https://www.w3schools.com/python/ref_func_str.asp
+#Funcion append() = https://www.w3schools.com/python/ref_list_append.asp
+#Funcion round() = https://realpython.com/python-rounding/
+#Funcion InicioDelSimulador() = Se encarga de llamar a las demas funciones
+#                               dependiendo de la opcion del usuario
+#Funcion Texto() = Dado un parametro presneta en la terminal cierto texto
+#Funcion Textote() = Dado un parametro presneta en la terminal cierto texto en grande
+#Funcion VerMisRecursos = LLama a Texto() para que muestre los recursos
+#Funcion IrAComprar = Te muestra tus recursos y llama a Texto() para
+#                     mostrar la tienda en la terminal
+#Funcion IrAAlimentar() = Te pregunta cuanta comida quieres usar y la resta a tu total
+#Funcion IrAVender() = Te permite vender a los porkoj y ganar dinero
+
 import os
 import random
-from re import I
 from time import sleep
-from traceback import print_tb
-from typing import Text
-
-
-
-
 
 dinero = 500
 comidaDePorkoj = 1000
@@ -19,9 +30,7 @@ nombreDeTusPorkoj = []
 pesoDeTusPorkoj = []
 añosDeTusPorkoj = []
 indiceDeTusPorkoj = []
-RegistroDeTodo = [pesoDeTusPorkoj,añosDeTusPorkoj,indiceDeTusPorkoj]
-diaDeInicio = date.today()
-
+RegistroDeTodo = [nombreDeTusPorkoj,pesoDeTusPorkoj,añosDeTusPorkoj,indiceDeTusPorkoj]
 
 def InicioDelSimulador():
     os.system("clear")
@@ -44,7 +53,7 @@ def Texto(textito):
     if(textito == "¿Que quieres hacer?"):
         os.system("clear")
         print()
-        print("¿Querires hacer?")
+        print("¿Que quieres hacer?")
         sleep(0.5)
         print("__________________________________")
         print("|  Alimentar a los porkoj    [a] |")
@@ -81,12 +90,12 @@ def Texto(textito):
         print("-----------------------------------------")
 
     elif(textito == "visitar a los cerdos"):
+        RegistroDeTodo = [nombreDeTusPorkoj, pesoDeTusPorkoj, añosDeTusPorkoj, indiceDeTusPorkoj]
         for i in range(len(nombreDeTusPorkoj)):
-
-            print(f"\n\nNOMBRE: {nombreDeTusPorkoj[i]}")
-            print(f"PESO: {pesoDeTusPorkoj[i]}")
-            print(f"AÑOS: {añosDeTusPorkoj[i]}")
-            print(f"INDICE: {indiceDeTusPorkoj[i]}")
+            print(f"\n\nNOMBRE: {RegistroDeTodo[0][i]}")
+            print(f"PESO: {RegistroDeTodo[1][i]} kg")
+            print(f"AÑOS: {RegistroDeTodo[2][i]}")
+            print(f"INDICE: {RegistroDeTodo[3][i]}")
 
 def Textote(texto):
     os.system("clear")
@@ -146,10 +155,6 @@ def IrAComprar():
         if respuesta != "s":
             quererComprar = False
             
-
-        
-    
-    
     InicioDelSimulador()
 
 def IrAAlimentar():
@@ -168,17 +173,14 @@ def IrAVender():
     print("Cuantos Porkoj vas a vender?")
     num1 = int(input("Tu respuesta es: "))
     numeroDePorkoj = numeroDePorkoj - num1
-    dineroBruto = int(num1 * 1000)
+    dineroBruto = int(num1 * 1600)
     print("Te dieron $" + str(dineroBruto))
     print("Pero como eres una buena pareja le das la mitad a tu pareja")
-    dinero = (dinero + num1/2)
-    dinero = int(dinero)
+    dinero = (dinero + dineroBruto//2)
     print("Tu dinero es: " + str(dinero)+"$")
     print("Te quedan: " + str(numeroDePorkoj) + " porkoj")
-    int("\nDALE ENTER PARA CONTINUAR")
+    input("\nDALE ENTER PARA CONTINUAR")
     InicioDelSimulador()
-
-
 
 Textote("FARMER SIMULATOR")
 InicioDelSimulador()
